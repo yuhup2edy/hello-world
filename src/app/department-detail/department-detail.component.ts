@@ -4,9 +4,8 @@ import  {ActivatedRoute }  from '@angular/router';
 @Component({
   selector: 'app-department-detail',
   template: `
-    <h3 *ngIf="displayName">
     you selected department with id = {{departmentId}}
-    </h3>
+    
   `
     ,
 
@@ -15,7 +14,7 @@ import  {ActivatedRoute }  from '@angular/router';
 })
 export class DepartmentDetailComponent implements OnInit {
   public departmentId;
-  public displayName = "true";
+  //displayName = "false";
   constructor(private route : ActivatedRoute) { }
 
   ngOnInit(): void {
