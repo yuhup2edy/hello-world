@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-employee-list',
@@ -26,12 +26,15 @@ import { Component, OnInit } from '@angular/core';
       <div *ngFor="let c1 of colors">
         <h2> {{c1}} </h2>
       </div>
-  ,
+
+        ,
+        
   `,
   styles: []
 })
 export class EmployeeListComponent implements OnInit {
   public displayName = true;
+  @Input() public parentData;
   public color = "red";
   public colors = ["red","blue","green","white","black"];
   constructor() { }
