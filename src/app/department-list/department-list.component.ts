@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Router, ActivatedRoute, ParamMap} from '@angular/router';
+import { TestObject } from 'protractor/built/driverProviders';
 
 @Component({
   selector: 'app-department-list',
@@ -38,7 +39,8 @@ export class DepartmentListComponent implements OnInit {
   }
   
   onSelect(department){
-    this.router.navigate(['/departments',department.id]);
+    //this.router.navigate(['/departments',department.id]); this is absolute navigation
+    this.router.navigate([department.id],{relativeTo : this.route});
   }
 
   isSelected(department)

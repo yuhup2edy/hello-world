@@ -46,6 +46,7 @@ export class DepartmentDetailComponent implements OnInit {
   goBack()
   {
     let backId = this.departmentId;
-    this.router.navigate(['/departments',{id : backId, test : 'myVal'}]);
+    //this.router.navigate(['/departments',{id : backId, test : 'myVal'}]);
+    this.router.navigate(['../',{id : backId, test: 'myVal'}],{relativeTo : this.route});
   }
 }
