@@ -6,10 +6,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { DepartmentDetailComponent } from './department-detail/department-detail.component';
 import { DepartmentContactComponent } from './department-contact/department-contact.component';
 import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
+import { MyNavComponent } from './my-nav/my-nav.component';
 
 
 const routes: Routes = [
   {path : '',redirectTo : '/departments',pathMatch : 'full'},
+  //{path : '',redirectTo : '/my-nav',pathMatch : 'full'},
   {path : 'departments',component : DepartmentListComponent},
   {path : 'employees',component : EmployeeListComponent},
   {
@@ -29,4 +31,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const routingComponents = [DepartmentListComponent,EmployeeListComponent,PageNotFoundComponent,DepartmentDetailComponent
-                                  ,DepartmentContactComponent,DepartmentOverviewComponent];
+                                  ,DepartmentContactComponent,DepartmentOverviewComponent,MyNavComponent];
