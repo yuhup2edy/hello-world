@@ -10,8 +10,8 @@ import { MyNavComponent } from './my-nav/my-nav.component';
 
 
 const routes: Routes = [
-  {path : '',redirectTo : '/departments',pathMatch : 'full'},
-  //{path : '',redirectTo : '/my-nav',pathMatch : 'full'},
+  //{path : '',redirectTo : '/departments',pathMatch : 'full'},
+  {path : '',redirectTo : 'my-nav',pathMatch : 'full'},
   {path : 'departments',component : DepartmentListComponent},
   {path : 'employees',component : EmployeeListComponent},
   {
